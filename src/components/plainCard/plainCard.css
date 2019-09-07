@@ -1,0 +1,28 @@
+#rectangleGris {
+    width: 350px;
+    height: 400px;
+    background: #e4e4e4;
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+#rectangleFoto {
+    width: 90%;
+    height: auto;
+    background: white;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+#imagen{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
