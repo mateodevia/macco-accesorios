@@ -3,9 +3,9 @@ import './homePage.css'
 import BlurredCarousel from "../blurredCarousel/blurredCarousel";
 import Catalogo from "../catalogo/catalogo";
 import Footer from '../footer/footer';
-import bolso2 from "./bolso2.JPG";
-import bolso8 from "./bolso8.JPG";
-import bolso6 from "./bolso6.JPG";
+import bolso2 from "../bolsosPage/bolso2.JPG";
+import bolso8 from "../bolsosPage/bolso8.JPG";
+import bolso6 from "../bolsosPage/bolso6.JPG";
 
 class HomePage extends Component {
     componentDidMount() {
