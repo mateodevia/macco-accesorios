@@ -24,7 +24,7 @@ class FileChooser extends Component {
     const uploaders = this.state.images.map(image => {
       const fd = new FormData();
       fd.append("image", image, image.name);
-      axios.post("/uploadimage", fd, {
+      axios.post("/images/uploadBolso", fd, {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         }

@@ -4,7 +4,8 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
-var indexRouter = require("./routes/index");
+var images = require("./routes/images");
+var bolsos = require("./routes/bolsos");
 
 
 
@@ -18,7 +19,7 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "front/build")));
+/**app.use(express.static(path.join(__dirname, "front/build")));
 
 app.get('*', function (_, res) {
   res.sendFile(path.join(__dirname, './front/build/index.html'), function (err) {
@@ -26,9 +27,10 @@ app.get('*', function (_, res) {
       res.status(500).send(err)
     }
   })
-})
+})**/
 
-app.use("/", indexRouter);
+app.use("/images", images);
+app.use("/crudBolsos", bolsos);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
