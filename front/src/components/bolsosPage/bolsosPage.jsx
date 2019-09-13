@@ -31,8 +31,7 @@ class BolsosPage extends Component {
         <div>
           <img className="imagen" src={this.state.imagen} />
         </div>
-        <Catalogo productos={this.state.productos} />
-        <Footer />
+        <Catalogo productos={this.state.productos} autenticado={this.props.autenticado} />
       </React.Fragment>
     );
   }

@@ -11,6 +11,7 @@ import NoviasPage from "./components/noviasPage/noviasPage";
 import FileChooser from "./components/fileChooser/fileChooser";
 import uploadPage from "./components/uploadPage/uploadPage";
 import LoginForm from "./components/login/login";
+import Footer from "./components/footer/footer";
 
 class App extends Component {
 
@@ -25,19 +26,27 @@ class App extends Component {
     this.setState({ autenticado: true });
   }
 
+  handleCerrarSesion = () => {
+    this.setState({ autenticado: false });
+  }
+
+  handleClick = (selectedTitle) => {
+    this.setState({ isOpen: !this.state.isOpen, selected: selectedTitle });
+  }
+
   render() {
     return (
       <HashRouter>
         <Route path="/" component={NavBar} />
         <Route path="/" component={HomePage} exact />
-        <Route path="/administrador" render={(props) => <LoginForm {...props} handleAuthentication={this.handleAuthentication} />} exact />
+        <Route path="/administrador" render={(props) => <LoginForm {...props} autenticado={this.state.autenticado} handleAuthentication={this.handleAuthentication} handleCerrarSesion={this.handleCerrarSesion} />} exact />
         <Route path="/bolsos" render={(props) => <BolsosPage {...props} autenticado={this.state.autenticado} />} />
-        <Route path="/aretes" component={AretesPage} />
-        <Route path="/collares" component={CollaresPage} />
-        <Route path="/pulseras" component={PulserasPage} />
-        <Route path="/swarosky" component={SwaroskyPage} />
-        <Route path="/novias" component={uploadPage} />
-
+        <Route path="/aretes" render={(props) => <AretesPage {...props} autenticado={this.state.autenticado} />} />
+        <Route path="/collares" render={(props) => <CollaresPage {...props} autenticado={this.state.autenticado} />} />
+        <Route path="/pulseras" render={(props) => <PulserasPage {...props} autenticado={this.state.autenticado} />} />
+        <Route path="/swarosky" render={(props) => <SwaroskyPage {...props} autenticado={this.state.autenticado} />} />
+        <Route path="/novias" render={(props) => <uploadPage {...props} autenticado={this.state.autenticado} />} />
+        <Route path="/" render={(props) => <Footer {...props} autenticado={this.state.autenticado} handleCerrarSesion={this.handleCerrarSesion} />} />
       </HashRouter>
     );
   }

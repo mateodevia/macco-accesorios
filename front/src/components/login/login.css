@@ -1,4 +1,4 @@
-#contenedorLogin {
+.contenedorLogin {
   width: 100%;
   margin-top: 10vh;
 }
@@ -9,7 +9,7 @@
   margin-left: auto;
 }
 
-#botonLogin {
+.boton {
 	border-radius: 20px;
 	border: 1px solid #800349;
 	background-color: #800349;

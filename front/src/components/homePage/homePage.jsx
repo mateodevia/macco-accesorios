@@ -36,7 +36,6 @@ class HomePage extends Component {
                 <BlurredCarousel />
                 <h1>Productos Destacados</h1>
                 <Catalogo productos={this.state.productosDestacados} />
-                <Footer />
             </React.Fragment>
         );
     }

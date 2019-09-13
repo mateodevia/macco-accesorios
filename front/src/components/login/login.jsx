@@ -20,6 +20,7 @@ class LoginForm extends Component {
     promesa1.then((res) => {
       if (res.data === "OK") {
         this.props.handleAuthentication();
+        alert("Bienvnido");
       }
       else {
         alert("Credenciales invalidas");
@@ -29,17 +30,27 @@ class LoginForm extends Component {
   }
 
   render() {
-    return (
-      <div id="contenedorLogin">
-        <div id="login">
-          <form id="formulario" onSubmit={this.handleSubmit}>
-            <h1>¡Bienvenido Administrador!</h1>
-            <input className="campoTexto" type="text" placeholder="Usuario" ref={this.usuario} />
-            <input className="campoTexto" type="text" placeholder="Contraseña" ref={this.clave} />
-            <input id="botonLogin" type="submit" value="Submit" />
-          </form>
+
+    if (!this.props.autenticado) {
+      return (
+        <div className="contenedorLogin">
+          <div id="login">
+            <form id="formulario" onSubmit={this.handleSubmit}>
+              <h1>¡Bienvenido Administrador!</h1>
+              <input className="campoTexto" type="text" placeholder="Usuario" ref={this.usuario} />
+              <input className="campoTexto" type="text" placeholder="Contraseña" ref={this.clave} />
+              <input className="boton" type="submit" value="Submit" />
+            </form>
+          </div>
+        </div>) || false;
+    }
+    else {
+      return (
+        <div className="contenedor">
+          <h1>Ya estas autenticado como administrador!</h1>
         </div>
-      </div>);
+      );
+    }
   }
 }
 

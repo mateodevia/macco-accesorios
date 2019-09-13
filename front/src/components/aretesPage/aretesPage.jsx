@@ -133,8 +133,7 @@ class AretesPage extends Component {
                 <div>
                     <img className="imagen" src={this.state.imagen} />
                 </div>
-                <Catalogo productos={this.state.productos} />
-                <Footer />
+                <Catalogo autenticado={this.props.autenticado} productos={this.state.productos} />
             </React.Fragment>
         );
     }
