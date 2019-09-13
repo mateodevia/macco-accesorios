@@ -21,14 +21,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "front/build")));
 
-app.get('*', function (_, res) {
-  res.sendFile(path.join(__dirname, './front/build/index.html'), function (err) {
-    if (err) {
-      res.status(500).send(err)
-    }
-  })
-})
-
 app.use("/images", images);
 app.use("/crudBolsos", bolsos);
 
