@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.33579f45.chunk.css",
-    "main.js": "/static/js/main.59a809b8.chunk.js",
-    "main.js.map": "/static/js/main.59a809b8.chunk.js.map",
+    "main.css": "/static/css/main.c068ed30.chunk.css",
+    "main.js": "/static/js/main.35c692ee.chunk.js",
+    "main.js.map": "/static/js/main.35c692ee.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.55521911.chunk.css": "/static/css/2.55521911.chunk.css",
-    "static/js/2.d4945bf0.chunk.js": "/static/js/2.d4945bf0.chunk.js",
-    "static/js/2.d4945bf0.chunk.js.map": "/static/js/2.d4945bf0.chunk.js.map",
+    "static/css/2.2a9446bb.chunk.css": "/static/css/2.2a9446bb.chunk.css",
+    "static/js/2.125e1197.chunk.js": "/static/js/2.125e1197.chunk.js",
+    "static/js/2.125e1197.chunk.js.map": "/static/js/2.125e1197.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.121e818cf9ca6c8b0a99867394ac453d.js": "/precache-manifest.121e818cf9ca6c8b0a99867394ac453d.js",
+    "precache-manifest.12c30bfe3e5d7fc2f463a7481e3dc65c.js": "/precache-manifest.12c30bfe3e5d7fc2f463a7481e3dc65c.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.55521911.chunk.css.map": "/static/css/2.55521911.chunk.css.map",
-    "static/css/main.33579f45.chunk.css.map": "/static/css/main.33579f45.chunk.css.map",
+    "static/css/2.2a9446bb.chunk.css.map": "/static/css/2.2a9446bb.chunk.css.map",
+    "static/css/main.c068ed30.chunk.css.map": "/static/css/main.c068ed30.chunk.css.map",
     "static/media/aretes.JPG": "/static/media/aretes.e50d9f94.JPG",
     "static/media/aretes1.JPG": "/static/media/aretes1.eedf937b.JPG",
     "static/media/aretes10.JPG": "/static/media/aretes10.76d95711.JPG",
@@ -43,6 +43,8 @@
     "static/media/facebook.svg": "/static/media/facebook.a605c085.svg",
     "static/media/icono.jpeg": "/static/media/icono.f992769e.jpeg",
     "static/media/instagram.svg": "/static/media/instagram.5de1b6eb.svg",
+    "static/media/pencil.svg": "/static/media/pencil.aeaaf38a.svg",
+    "static/media/recycle.svg": "/static/media/recycle.c1b5d2c0.svg",
     "static/media/whatsapp.svg": "/static/media/whatsapp.300c9034.svg"
   }
 }
