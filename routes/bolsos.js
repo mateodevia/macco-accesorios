@@ -17,7 +17,8 @@ router.use(express.json());
 
 const app = express();
 
-const url = process.env.MONGOLAB_URI;
+//const url = process.env.MONGOLAB_URI;
+const url = "mongodb://mateo:mateo12345@ds229290.mlab.com:29290/macco_db";
 
 //------------------------------------------------------------------------------------------------
 // CALLBACKS
