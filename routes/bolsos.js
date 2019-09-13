@@ -16,7 +16,6 @@ router.use(function (req, res, next) {
 router.use(express.json());
 
 const app = express();
-const PORT = 8080;
 
 const url = "mongodb://mateo:mateo12345@ds229290.mlab.com:29290/macco_db";
 

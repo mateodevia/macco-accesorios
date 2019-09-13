@@ -27,9 +27,9 @@ app.get('*', function (_, res) {
       res.status(500).send(err)
     }
   })
-}) *
+})
 
-  app.use("/images", images);
+app.use("/images", images);
 app.use("/crudBolsos", bolsos);
 
 // catch 404 and forward to error handler
