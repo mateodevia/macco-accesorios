@@ -31,7 +31,7 @@ router.use(function (req, res, next) {
 //------------------------------------------------------------------------------------------------
 
 //SERVICE: This method receives an image files and uploads it to cloudinary
-router.post("/uploadimage", function (req, res, next) {
+router.post("/uploadBolso", function (req, res, next) {
   let image = req.files.image;
   let body = req.body;
 

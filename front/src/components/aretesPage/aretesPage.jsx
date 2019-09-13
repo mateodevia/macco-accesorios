@@ -31,97 +31,97 @@ class AretesPage extends Component {
         imagen: aretes,
         productos: [
             {
-                rutaImagen: aretes1,
+                imagen: aretes1,
                 nombre: 'Aretes 1',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes2,
+                imagen: aretes2,
                 nombre: 'Aretes 2',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes3,
+                imagen: aretes3,
                 nombre: 'Aretes 3',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes4,
+                imagen: aretes4,
                 nombre: 'Aretes 4',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes5,
+                imagen: aretes5,
                 nombre: 'Aretes 5',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes6,
+                imagen: aretes6,
                 nombre: 'Aretes 6',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes7,
+                imagen: aretes7,
                 nombre: 'Aretes 7',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes8,
+                imagen: aretes8,
                 nombre: 'Aretes 8',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes9,
+                imagen: aretes9,
                 nombre: 'Aretes 9',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes10,
+                imagen: aretes10,
                 nombre: 'Aretes 10',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes11,
+                imagen: aretes11,
                 nombre: 'Aretes 11',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes12,
+                imagen: aretes12,
                 nombre: 'Aretes 12',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes13,
+                imagen: aretes13,
                 nombre: 'Aretes 13',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes14,
+                imagen: aretes14,
                 nombre: 'Aretes 14',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes15,
+                imagen: aretes15,
                 nombre: 'Aretes 15',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes16,
+                imagen: aretes16,
                 nombre: 'Aretes 16',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes17,
+                imagen: aretes17,
                 nombre: 'Aretes 17',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes18,
+                imagen: aretes18,
                 nombre: 'Aretes 18',
                 precio: '$100,000'
             },
             {
-                rutaImagen: aretes19,
+                imagen: aretes19,
                 nombre: 'Aretes 19',
                 precio: '$100,000'
             }

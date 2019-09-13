@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./plainCard.css";
 import trash from "./recycle.svg";
 import edit from "./pencil.svg";

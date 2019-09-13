@@ -24,7 +24,7 @@ class FileChooser extends Component {
     const uploaders = this.state.images.map(image => {
       const fd = new FormData();
       fd.append("image", image, image.name);
-      axios.post("/uploadimage", fd, {
+      axios.post("/images/uploadBolso", fd, {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         }
@@ -33,9 +33,18 @@ class FileChooser extends Component {
         .catch(() => console.log(`no se pudo subir la imagen ${image.name}`))
 
     });
+  }
 
-    // Once all the files are uploaded
-
+  mongo = () => {
+    let promesa = axios.get("/crudBolsos/mateo", {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    });
+    promesa.then(res => {
+      console.log(res);
+    });
+    promesa.catch(() => console.log("pailas"));
   }
 
   render() {
@@ -52,6 +61,8 @@ class FileChooser extends Component {
           <div>
             <button value="Submit"
               onClick={this.uploadImages}>Submit</button>
+            <button
+              onClick={this.mongo}>Mongo</button>
           </div>
         </div>
       </div>
