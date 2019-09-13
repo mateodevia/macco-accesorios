@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import NoDisponible from '../noDisponible/noDisponible';
 import "../styles/general.css";
 import "./uploadPage.css";
-import 'bootstrap/dist/css/bootstrap.css';
 import FileChooser from '../fileChooser/fileChooser';
 
 

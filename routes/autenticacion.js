@@ -19,6 +19,7 @@ router.use(express.json());
 
 
 router.post("/login", function (req, res, next) {
+  console.log(req.body);
   let usuario = req.body.usuario;
   let clave = req.body.clave;
 
