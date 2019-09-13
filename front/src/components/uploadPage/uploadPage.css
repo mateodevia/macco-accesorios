@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a, h1, h2, h3, h4, h5, h6{
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+
+#lineaVerde {
+    background-color: #1e5128;
+    height: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+}
+
+#lineaRoja {
+    background-color: #800e49;
+    height: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.fila {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5px;
+    justify-content: center;
+}
+
+.item {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 5px
+}
+
+.contenedor {
+    text-align: center;
+}
+
+#logo {
+    height: 10vw;
+    margin-bottom: 3%;
+}
+
+.fondoGris{
+    background-color: white;
+    padding-top: 5px;
+}
+
+
+.separado{
+padding-top: 5px;
+padding-right: 5px;
+padding-left: 5px;
+padding-bottom: 5px;
+
+}
+@media only screen and (max-width: 600px) {
+
+    #logo {
+        height: 20vw;
+        margin-bottom: 3%;
+    }
+}

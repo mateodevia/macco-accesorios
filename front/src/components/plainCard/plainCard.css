@@ -1,28 +1,61 @@
 #rectangleGris {
-    width: 350px;
-    height: 400px;
-    background: #e4e4e4;
-    margin: 10px;
-    justify-content: center;
-    text-align: center;
-}
-
-#rectangleFoto {
-    width: 90%;
-    height: auto;
-    background: white;
-    margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-h2 {
+  width: 350px;
+  background: #e4e4e4;
+  margin: 10px;
+  justify-content: center;
   text-align: center;
 }
 
-#imagen{
+
+#rectangleFoto {
   width: 90%;
+  height: auto;
+  background: white;
+  margin: 20px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+}
+
+h2 {
+text-align: center;
+}
+
+#imagen{
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 5%;
+}
+
+#botonEditar {
+  height: 50px;
+  width: 50px;
+  background-color: #3275fc;
+  border-radius: 8px;
+  margin:10px;
+
+}
+
+#iconoEditar{
+
+  height: 100%;
+  width: 100%;
+  background-color: #3275fc;
+
+
+}
+
+#botonBorrar {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 8px;
+  margin:10px;
+}
+
+#iconoBorrar{
+
+  height: 100%;
+  width: 100%;
+  background-color: red;
 }

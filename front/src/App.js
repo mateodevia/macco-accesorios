@@ -8,7 +8,8 @@ import CollaresPage from "./components/collaresPage/collaresPage";
 import PulserasPage from "./components/pulserasPage/pulserasPage";
 import SwaroskyPage from "./components/swaroskiPage/swaroskyPage";
 import NoviasPage from "./components/noviasPage/noviasPage";
-import FileChooser from "./components/fileChooser/fileChooser"
+import FileChooser from "./components/fileChooser/fileChooser";
+import uploadPage from "./components/uploadPage/uploadPage";
 
 function App() {
   return (
@@ -20,8 +21,8 @@ function App() {
       <Route path="/collares" component={CollaresPage} />
       <Route path="/pulseras" component={PulserasPage} />
       <Route path="/swarosky" component={SwaroskyPage} />
-      <Route path="/novias" component={NoviasPage} />
-      <Route path="/" component={FileChooser} />
+      <Route path="/novias" component={uploadPage} />
+
     </HashRouter>
   );
 }
