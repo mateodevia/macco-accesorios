@@ -17,7 +17,7 @@ router.use(express.json());
 
 const app = express();
 const PORT = 8080;
-const url = "mongodb://localhost:27017";
+const url = process.env.MONGOLAB_URI;
 
 //------------------------------------------------------------------------------------------------
 // CALLBACKS
@@ -29,7 +29,7 @@ function postCallBack(bolso, resolve, reject) {
 
   promise1.then(() => {
 
-    const db = client.db("macco");
+    const db = client.db("macco_db");
     const colBolsos = db.collection("bolsos");
 
     let promise2 = colBolsos.insertOne(bolso);
@@ -38,7 +38,7 @@ function postCallBack(bolso, resolve, reject) {
       resolve(res);
     });
     promise2.catch((err) => reject(err));
-  });
+  })
 }
 
 function getCallBack(resolve, reject) {
@@ -47,7 +47,7 @@ function getCallBack(resolve, reject) {
 
   promise1.then(() => {
 
-    const db = client.db("macco");
+    const db = client.db("macco_db");
     const colBolsos = db.collection("bolsos");
 
     let promise2 = colBolsos.find({}).toArray();
@@ -63,6 +63,10 @@ function getCallBack(resolve, reject) {
 //------------------------------------------------------------------------------------------------
 // SERVICES
 //------------------------------------------------------------------------------------------------
+
+router.get("/mateo", (req, res) => {
+  res.send(url)
+});
 
 router.get("/", (req, res) => {
   console.log("llego al endpont");
@@ -81,7 +85,6 @@ router.post("", (req, res) => {
     (bolso) => res.json(bolso),
     (err) => res.json(err)
   );
-
 });
 
 module.exports = router;
