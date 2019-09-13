@@ -4,28 +4,26 @@ import trash from "./recycle.svg";
 import edit from "./pencil.svg";
 
 class PlainCard extends Component {
-    state = {
+  render() {
+    return (
+      <div id="rectangleGris">
+        <img id="imagen" src={this.props.rutaImagen} />
 
-        deleteRoute:trash,
-        editRoute: edit,
-
-
-    }
-    render() {
-        return (
-            <div id="rectangleGris">
-                <img id="imagen" src={this.props.rutaImagen} />
-
-                <h1>{this.props.nombre}</h1>
-                <h2>{this.props.precio}</h2>
-                <button id="botonEditar" >
-                    <img id ="iconoEditar" src={this.state.editRoute} alt="" />
-                </button>
-                <button id="botonBorrar"><img id="iconoBorrar" src={this.state.deleteRoute} width="15%" height="15%" alt=""></img> </button>
-
-            </div>
-        );
-    }
+        <h1>{this.props.nombre}</h1>
+        <h2>{this.props.precio}</h2>
+        {this.props.autenticado &&
+                    <button id="botonEditar" >
+                      <img id="iconoEditar" src={trash} alt="" />
+                    </button>
+        }
+        {this.props.autenticado &&
+                    <button id="botonBorrar">
+                      <img id="iconoBorrar" src={edit} width="15%" height="15%" alt="" />
+                    </button>
+        }
+      </div>
+    );
+  }
 }
 
 export default PlainCard;
