@@ -66,7 +66,7 @@ var textarea = {
     <div className="fila">
     <div id="fila separado">
     </div>
-    <textarea className="space-around col-12" style={textarea} rows = "2" cols = "20" name = "description" placeholder="Describa el producto aqui"> </textarea>
+    <textarea className="space-around " style={textarea} rows = "2" cols = "20" name = "description" placeholder="Describa el producto aqui"> </textarea>
 </div>
 <div id="lineaRoja" ></div>
 <div className="fila">
