@@ -142,7 +142,7 @@ class Catalogo extends Component {
         <div className="row justify-content-center">
           {this.state.productosAPintar.map(
             producto =>
-              < PlainCard autenticado={this.props.autenticado} key={producto._id} rutaImagen={producto.imagen} nombre={producto.nombre} precio={producto.precio} cantidad={producto.cantidad} promocion={producto.promocion} />
+              < PlainCard autenticado={this.props.autenticado} key={producto._id} id={producto._id} rutaImagen={producto.imagen} nombre={producto.nombre} precio={producto.precio} cantidad={producto.cantidad} promocion={producto.promocion} />
           )}
         </div>
         <button onClick={this.handleClick}>heyyyyyyy</button>
