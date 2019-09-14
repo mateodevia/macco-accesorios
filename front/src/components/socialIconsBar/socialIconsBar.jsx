@@ -20,7 +20,7 @@ class SocialIconsBar extends Component {
             {
                 nombre: 'whatsapp',
                 imagen: whatsapp,
-                url: ''
+                url: 'https://wa.me/573208478097'
             }
         ]
     }
