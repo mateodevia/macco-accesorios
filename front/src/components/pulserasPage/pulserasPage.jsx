@@ -6,8 +6,8 @@ class PulserasPage extends Component {
         window.scrollTo(0, 0);
     }
     state = {}
-    render() {
-        return (<NoDisponible />);
+    render( ) {
+    return (<NoDisponible />);
     }
 }
 
