@@ -21,6 +21,10 @@ class Footer extends Component {
                     <div className="contenedor">
                         <img id="logo" src="logo.jpeg" />
                     </div>
+                    {
+                        this.props.autenticado &&
+                        <button id="botonCerraSesion" onClick={this.props.handleCerrarSesion}>Cerrar Sesion</button>
+                    }
                 </div>
             </React.Fragment >
         );

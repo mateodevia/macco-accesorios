@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import Catalogo from "../catalogo/catalogo";
 import Footer from "../footer/footer";
+import SideDrawer from "../sideDrawer/sideDrawer";
 import "../styles/general.css";
 import axios from "axios";
+import bolsos from "./bolsos.jpg";
 
 class BolsosPage extends Component {
 
@@ -29,10 +31,10 @@ class BolsosPage extends Component {
     return (
       <React.Fragment>
         <div>
-          <img className="imagen" src={this.state.imagen} />
+          <img className="imagen" src={bolsos} />
         </div>
-        <Catalogo productos={this.state.productos} />
-        <Footer />
+        <SideDrawer></SideDrawer>
+        <Catalogo productos={this.state.productos} autenticado={this.props.autenticado} />
       </React.Fragment>
     );
   }

@@ -1,3 +1,21 @@
+#botonCerraSesion {
+	border-radius: 20px;
+	border: 1px solid #800349;
+	background-color: #800349;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+	outline: none;
+	cursor: pointer;
+}
+
 #lineaVerde {
     background-color: #1e5128;
     height: 5px;
@@ -38,6 +56,7 @@
 
 .fondoGris{
     background-color: white;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {

@@ -12,14 +12,14 @@ class PlainCard extends Component {
         <h1>{this.props.nombre}</h1>
         <h2>{this.props.precio}</h2>
         {this.props.autenticado &&
-                    <button id="botonEditar" >
-                      <img id="iconoEditar" src={trash} alt="" />
-                    </button>
+          <button id="botonEditar" >
+            <img id="iconoEditar" src={edit} alt="" />
+          </button>
         }
         {this.props.autenticado &&
-                    <button id="botonBorrar">
-                      <img id="iconoBorrar" src={edit} width="15%" height="15%" alt="" />
-                    </button>
+          <button id="botonBorrar">
+            <img id="iconoBorrar" src={trash} width="15%" height="15%" alt="" />
+          </button>
         }
       </div>
     );

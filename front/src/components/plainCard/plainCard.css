@@ -32,14 +32,17 @@ margin-top: 5%;
   width: 50px;
   background-color: #3275fc;
   border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
   margin:10px;
 
 }
 
 #iconoEditar{
 
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
   background-color: #3275fc;
 
 
@@ -50,12 +53,15 @@ margin-top: 5%;
   width: 50px;
   background-color: red;
   border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
   margin:10px;
 }
 
 #iconoBorrar{
 
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
   background-color: red;
 }
