@@ -156,5 +156,4 @@ class Catalogo extends Component {
     );
   }
 }
-
 export default Catalogo;
