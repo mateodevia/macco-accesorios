@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f0314aadf5c47b51a6fe0a41a99f77ae",
+    "revision": "354469dcced98cd2fcbf76be9db2aa0a",
     "url": "/index.html"
   },
   {
-    "revision": "5d29c62172d959499184",
+    "revision": "e9c62e65d2d3aea31d1a",
     "url": "/static/css/2.2a9446bb.chunk.css"
   },
   {
-    "revision": "d6cd3217bed58aedab4e",
-    "url": "/static/css/main.c068ed30.chunk.css"
+    "revision": "eee6bc0596053517a97b",
+    "url": "/static/css/main.c72bd395.chunk.css"
   },
   {
-    "revision": "5d29c62172d959499184",
-    "url": "/static/js/2.125e1197.chunk.js"
+    "revision": "e9c62e65d2d3aea31d1a",
+    "url": "/static/js/2.5d5c2482.chunk.js"
   },
   {
-    "revision": "d6cd3217bed58aedab4e",
-    "url": "/static/js/main.35c692ee.chunk.js"
+    "revision": "eee6bc0596053517a97b",
+    "url": "/static/js/main.3f0d23aa.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -104,6 +104,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/aretes9.df413ca7.JPG"
   },
   {
+    "revision": "7da2026c8e75926cbe8e041b1306c75d",
+    "url": "/static/media/arrowDown.7da2026c.svg"
+  },
+  {
+    "revision": "a0e061b54507c1ea6361ee20ac930f2c",
+    "url": "/static/media/arrowRight.a0e061b5.svg"
+  },
+  {
     "revision": "436e0e76fae2e198040da4e34f64569a",
     "url": "/static/media/bolso2.436e0e76.jpg"
   },
@@ -114,6 +122,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "34477b277931e93014880cfb17e1770d",
     "url": "/static/media/bolso8.34477b27.jpg"
+  },
+  {
+    "revision": "19dc6b82b373d5104e9ab3412da61641",
+    "url": "/static/media/bolsos.19dc6b82.jpg"
   },
   {
     "revision": "77b4e720a882902eb36d241bdef6c594",
@@ -144,12 +156,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/instagram.5de1b6eb.svg"
   },
   {
-    "revision": "aeaaf38a0e361bd94ce2debf09a106c7",
-    "url": "/static/media/pencil.aeaaf38a.svg"
+    "revision": "5c6a6e56d21042af1b42e925210dd16f",
+    "url": "/static/media/pencil.5c6a6e56.svg"
   },
   {
-    "revision": "c1b5d2c0cba6b0ec31919f94b75ea1d6",
-    "url": "/static/media/recycle.c1b5d2c0.svg"
+    "revision": "ac56c78cf33e726671fa6e56a3a446f2",
+    "url": "/static/media/recycle.ac56c78c.svg"
   },
   {
     "revision": "300c9034b2962fac7733b0d8b11d101d",

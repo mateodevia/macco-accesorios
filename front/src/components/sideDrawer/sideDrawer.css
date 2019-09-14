@@ -5,15 +5,43 @@
 
 .tituloFiltro {
   margin: 0;
+  text-align: center;
 }
 
-#botonSide {
-  display: none;
+.opcion {
+  margin: 2px;
 }
 
-.logo{
-  height: 50px;
-  margin-top: 1vw;
+#botonCerrado {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+#botonAbierto {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.botonFiltros {
+  height: 20px;
+  width: 20px;
+  margin: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#palabraFiltros {
+  text-align: left;
+  margin: 0;
+  margin-left: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
 }
 
 #sideDrawerNav{
@@ -24,11 +52,11 @@
   position: sticky;
   overflow: hidden;
   width: 100%;
-  top: 103.8px;
+  top: 96px;
   background-color: white;
-  -webkit-box-shadow: 33px 0px 36px -43px rgba(0,0,0,0.75);
-  -moz-box-shadow: 33px 0px 36px -43px rgba(0,0,0,0.75);
-  box-shadow: 33px 0px 36px -43px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 52px 40px 2px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 52px 40px 2px rgba(0,0,0,0.15);
+  box-shadow: 0px 52px 40px 2px rgba(0,0,0,0.15);
   opacity: 0.95;
   z-index: 5;
 }
@@ -44,8 +72,15 @@
   width: 100%;
 }
 
-.inputFiltro{
+.contenedorInputValor{
   display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.inputFiltro {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .titulosVertical{
@@ -57,28 +92,67 @@
   font-size: 100%;
   padding-top: 1vw;
   padding-bottom: 1vw;
-  padding-left: 1vw;
-  padding-right: 1vw;
-}
-.filtro:hover{
-
-  background-color: #FCF8EF;
-  color: #800e49;
+  margin-left: 3vw;
+  margin-right: 3vw;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
-
+#negro {
+  background-color: black;
+  height: 19px;
+  width: 50px;
+  border-radius: 25px;
 }
 
-.selected {
-  color: #800e49;
-  border-bottom: 4px solid
+#rojo {
+  background-color: red;
+  height: 19px;
+  width: 50px;
+  border-radius: 25px;
+}
+
+#blanco {
+  background-color: white;
+  border:  1px solid #800e49;
+  height: 17px;
+  width: 48px;
+  border-radius: 25px;
+}
+
+#azul {
+  background-color: darkblue;
+  height: 19px;
+  width: 50px;
+  border-radius: 25px;
+}
+
+#verde {
+  background-color: green;
+  height: 19px;
+  width: 50px;
+  border-radius: 25px;
+}
+
+#rosado {
+  background-color: pink;
+  height: 19px;
+  width: 50px;
+  border-radius: 25px;
 }
 
 @media only screen and (max-width: 600px) {
+
+  #sticky {
+    position: sticky;
+    overflow: hidden;
+    width: 100%;
+    top: 59px;
+    background-color: white;
+    -webkit-box-shadow: 0px 52px 40px 2px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 52px 40px 2px rgba(0,0,0,0.15);
+    box-shadow: 0px 52px 40px 2px rgba(0,0,0,0.15);
+    opacity: 0.95;
+    z-index: 5;
+  }
   #boton {
       display: block;
       padding: 2vw;
@@ -91,15 +165,24 @@ a {
       left:0;
   }
 
-  .logo{
-      height: 50px;
+  .contenedorInputValor{
+    justify-content: center;
   }
 
   .titulosHorizontal{
       display: none;
   }
 
-  .titulosVertical{
+  .tituloFiltro {
+    font-size: 20px;
+  }
+
+  .opcion {
+    font-size: 15px;
+    margin: 2px;
+  }
+
+  .filtros{
       display: flex;
       justify-content: center;
       padding: 0;
@@ -108,18 +191,12 @@ a {
       font-size: 50%;
   }
 
-  #titulo{
+  #filtro{
       list-style-type: none;
       font-size: 4vh;
       padding-top: 2vw;
       padding-bottom: 2vw;
       padding-left: 2vw;
       padding-right: 2vw;
-  }
-
-  .selectedOnPhone {
-      color: #800e49;
-      background-color: #FCF8EF;
-      border-left: 5px solid;
   }
 }

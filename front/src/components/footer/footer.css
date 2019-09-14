@@ -12,6 +12,8 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 20px;
+	outline: none;
+	cursor: pointer;
 }
 
 #lineaVerde {
