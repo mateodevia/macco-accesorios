@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Catalogo from '../catalogo/catalogo'
 import Footer from '../footer/footer';
+import SideDrawer from "../sideDrawer/sideDrawer";
 import "../styles/general.css";
 import aretes from "./aretes.JPG";
 import aretes1 from "./aretes1.JPG";
@@ -133,6 +134,7 @@ class AretesPage extends Component {
                 <div>
                     <img className="imagen" src={this.state.imagen} />
                 </div>
+                <SideDrawer></SideDrawer>
                 <Catalogo autenticado={this.props.autenticado} productos={this.state.productos} />
             </React.Fragment>
         );

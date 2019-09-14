@@ -11,18 +11,19 @@
     margin-top: 1vw;
 }
 
-nav{
-    width: 100vw;  
+#barra{
+    width: 100vw;
 }
 
-#barraSticky { 
+#barraSticky {
     position: sticky;
     overflow: hidden;
     top: 0;
-    width: 100%; 
+    width: 100%;
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
     opacity: 0.95;
-    z-index: 2;
+    z-index: 0;
 }
 
 .titulosHorizontal{
@@ -33,7 +34,7 @@ nav{
     position: sticky;
     overflow: hidden;
     top: 0;
-    width: 100%; 
+    width: 100%;
 }
 
 .titulosVertical{

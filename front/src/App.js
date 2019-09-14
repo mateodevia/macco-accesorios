@@ -12,6 +12,7 @@ import FileChooser from "./components/fileChooser/fileChooser";
 import uploadPage from "./components/uploadPage/uploadPage";
 import LoginForm from "./components/login/login";
 import Footer from "./components/footer/footer";
+import SideDrawer from "./components/sideDrawer/sideDrawer";
 
 class App extends Component {
 

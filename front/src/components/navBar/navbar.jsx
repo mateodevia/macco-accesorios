@@ -24,7 +24,7 @@ class NavBar extends Component {
             <img className='logo' src={titulo}></img>
           </a>
         </div>
-        <nav>
+        <nav id="barra">
           <ul className='titulosHorizontal'>
             {this.state.titulos.map(
               titulo => {
