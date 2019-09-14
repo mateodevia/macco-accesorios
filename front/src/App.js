@@ -20,10 +20,10 @@ function App() {
       <Route path="/aretes" component={AretesPage} />
       <Route path="/collares" component={CollaresPage} />
       <Route path="/pulseras" component={PulserasPage} />
-      <Route path="/swarosky" component={SwaroskyPage} />
+      <Route path="/" component={FileChooser} />
       <Route path="/novias" component={uploadPage} />
-
-    </HashRouter>
+  </HashRouter>
+  
   );
 }
 
