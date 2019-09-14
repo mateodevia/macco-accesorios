@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./footer.css";
 import SocialIconsBar from '../socialIconsBar/socialIconsBar';
+import FileChooser from '../fileChooser/fileChooser';
 
 
 class Footer extends Component {
@@ -26,6 +27,7 @@ class Footer extends Component {
                         <button id="botonCerraSesion" onClick={this.props.handleCerrarSesion}>Cerrar Sesion</button>
                     }
                 </div>
+                <FileChooser></FileChooser>
             </React.Fragment >
         );
     }

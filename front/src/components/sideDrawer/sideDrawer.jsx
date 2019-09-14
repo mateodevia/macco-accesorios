@@ -24,8 +24,12 @@ class SideDrawer extends Component {
         rojo: true,
         azul: true,
         verde: true,
-        rosado: true
-
+        rosado: true,
+        cafe: true,
+        fucsia: true,
+        azulClaro: true,
+        amarillo: true,
+        avano: true
       }
     };
   }
@@ -37,14 +41,16 @@ class SideDrawer extends Component {
     let nuevoEstado = { ...this.state };
     nuevoEstado[arreglo][atrib] = !nuevoEstado[arreglo][atrib];
     this.setState(nuevoEstado);
+    if (arreglo === "tamaños") {
+      this.props.handlerFiltroTamano(this.state[arreglo]);
+    }
+    else if (arreglo === "precios") {
+      this.props.handlerFiltroPrecio(this.state[arreglo]);
+    }
+    else if (arreglo === "colores") {
+      this.props.handlerFiltroColor(this.state[arreglo]);
+    }
   }
-
-  handleChange2 = (event) => {
-    let nuevoEstado = { ...this.state };
-    nuevoEstado.Pequeño = !nuevoEstado.Pequeño;
-    this.setState(nuevoEstado);
-  }
-
   render() {
     return (
       <div id="sticky">
@@ -91,7 +97,7 @@ class SideDrawer extends Component {
                 </div>
                 <div className="contenedorInputValor">
                   <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("precios", "precioAlto")} />
-                  <h6 className="opcion">$100,000 - $200,000</h6>
+                  <h6 className="opcion">$200,000 - $500,000</h6>
                 </div>
               </li>
               <li className="filtro">
@@ -101,18 +107,30 @@ class SideDrawer extends Component {
                   <div id="negro" />
                   <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("colores", "blanco")} />
                   <div id="blanco" />
-                </div>
-                <div className="contenedorInputValor">
                   <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("colores", "rojo")} />
                   <div id="rojo" />
-                  <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("colores", "azul")} />
-                  <div id="azul" />
                 </div>
                 <div className="contenedorInputValor">
+                  <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("colores", "azul")} />
+                  <div id="azul" />
+                  <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("colores", "azulClaro")} />
+                  <div id="azulClaro" />
+                  <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("colores", "fucsia")} />
+                  <div id="fucsia" />
+                </div>
+                <div className="contenedorInputValor">
+                  <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("colores", "cafe")} />
+                  <div id="cafe" />
                   <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("colores", "verde")} />
                   <div id="verde" />
                   <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("colores", "rosado")} />
                   <div id="rosado" />
+                </div>
+                <div className="contenedorInputValor">
+                  <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("colores", "avano")} />
+                  <div id="avano" />
+                  <input className="inputFiltro" type="checkbox" defaultChecked={true} onChange={() => this.handleChange("colores", "amarillo")} />
+                  <div id="amarillo" />
                 </div>
               </li>
             </ul>

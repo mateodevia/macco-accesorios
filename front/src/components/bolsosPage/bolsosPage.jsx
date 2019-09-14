@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import Catalogo from "../catalogo/catalogo";
 import Footer from "../footer/footer";
-import SideDrawer from "../sideDrawer/sideDrawer";
 import "../styles/general.css";
 import axios from "axios";
-import bolsos from "./bolsos.jpg";
 
 class BolsosPage extends Component {
 
@@ -24,6 +22,7 @@ class BolsosPage extends Component {
     promesa.then(res => {
 
       this.setState({ productos: res.data });
+
     });
     promesa.catch(() => console.log("pailas"));
   }
@@ -31,9 +30,8 @@ class BolsosPage extends Component {
     return (
       <React.Fragment>
         <div>
-          <img className="imagen" src={bolsos} />
+          <img className="imagen" src="https://res.cloudinary.com/drfggfn8f/image/upload/v1568479748/macco/bolsos/kbm6hsxlel13qoijtr9v.jpg" />
         </div>
-        <SideDrawer></SideDrawer>
         <Catalogo productos={this.state.productos} autenticado={this.props.autenticado} />
       </React.Fragment>
     );
