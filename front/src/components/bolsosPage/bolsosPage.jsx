@@ -32,7 +32,7 @@ class BolsosPage extends Component {
         <div>
           <img className="imagen" src="https://res.cloudinary.com/drfggfn8f/image/upload/v1568479748/macco/bolsos/kbm6hsxlel13qoijtr9v.jpg" />
         </div>
-        <Catalogo productos={this.state.productos} autenticado={this.props.autenticado} />
+        <Catalogo productos={this.state.productos} autenticado={this.props.autenticado} filtro={true} />
       </React.Fragment>
     );
   }

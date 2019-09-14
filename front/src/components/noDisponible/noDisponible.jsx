@@ -8,8 +8,8 @@ class NoDisponible extends Component {
                 <div className='contenedor'>
                     <img src="https://img.icons8.com/ios-filled/100/000000/image-not-avialable.png" />
                 </div>
-                <h1>Oops! Este contenido aun no esta disponible</h1>
-                <h2>Estamos trabajando, para traertelo lo mas pronto posible</h2>
+                <h1>Oops! MACCO aún no tiene estos articulos disponibles</h1>
+                <h2>Siguenos en nuestras redes y te avisaremos cada vez que tengamos productos nuevos</h2>
             </React.Fragment>
         );
     }

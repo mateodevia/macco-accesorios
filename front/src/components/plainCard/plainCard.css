@@ -65,3 +65,34 @@ margin-top: 5%;
   width: 80%;
   background-color: red;
 }
+
+#promocion {
+  width: 70px;
+	border-radius: 20px;
+  background-color: #1e5128;
+  color: white;
+  font-size: 10px;
+  font-weight:bold;
+  vertical-align: middle;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  padding: 5px;
+  margin: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#noDisponible {
+  width: 100px;
+	border-radius: 20px;
+  background-color: #800e49;
+  color: white;
+  font-size: 10px;
+  font-weight:bold;
+  vertical-align: middle;
+  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}

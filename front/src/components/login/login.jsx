@@ -20,10 +20,10 @@ class LoginForm extends Component {
     promesa1.then((res) => {
       if (res.data === "OK") {
         this.props.handleAuthentication();
-        alert("Bienvnido");
+        alert("Bienvenida Maria Consuelo");
       }
       else {
-        alert("Credenciales invalidas");
+        alert("Credenciales Invalidas");
       }
     });
     promesa1.catch(() => console.log("no se pudo comunicar con el servidor"));

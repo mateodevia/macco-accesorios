@@ -10,7 +10,7 @@ class Catalogo extends Component {
 
     this.state = {
       uploading: false,
-      productosAPintar: []
+      productosAPintar: props.productos
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -136,11 +136,13 @@ class Catalogo extends Component {
   render() {
     return (
       <div>
-        <SideDrawer handlerFiltroTamano={this.handlerFiltroTamaño} handlerFiltroPrecio={this.handlerFiltroPrecio} handlerFiltroColor={this.handlerFiltroColor}></SideDrawer>
+        {this.props.filtro &&
+          <SideDrawer handlerFiltroTamano={this.handlerFiltroTamaño} handlerFiltroPrecio={this.handlerFiltroPrecio} handlerFiltroColor={this.handlerFiltroColor}></SideDrawer>
+        }
         <div className="row justify-content-center">
           {this.state.productosAPintar.map(
             producto =>
-              < PlainCard autenticado={this.props.autenticado} key={producto._id} rutaImagen={producto.imagen} nombre={producto.nombre} precio={producto.precio} />
+              < PlainCard autenticado={this.props.autenticado} key={producto._id} rutaImagen={producto.imagen} nombre={producto.nombre} precio={producto.precio} cantidad={producto.cantidad} promocion={producto.promocion} />
           )}
         </div>
         <button onClick={this.handleClick}>heyyyyyyy</button>

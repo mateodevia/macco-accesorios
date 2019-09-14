@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c427d1c7a6024360081fd182087516e1",
+    "revision": "9a7cfc1689caf4f25c84bd2925957da7",
     "url": "/index.html"
   },
   {
-    "revision": "d302a9d91c715a8d8a6c",
+    "revision": "2ee2e0296e9484139319",
     "url": "/static/css/2.2a9446bb.chunk.css"
   },
   {
-    "revision": "8ce5a3426a5c16f1eacf",
-    "url": "/static/css/main.bd30b4ad.chunk.css"
+    "revision": "5b0e8c9eb894346a5f1d",
+    "url": "/static/css/main.4226f9dd.chunk.css"
   },
   {
-    "revision": "d302a9d91c715a8d8a6c",
-    "url": "/static/js/2.d3355590.chunk.js"
+    "revision": "2ee2e0296e9484139319",
+    "url": "/static/js/2.41324d7f.chunk.js"
   },
   {
-    "revision": "8ce5a3426a5c16f1eacf",
-    "url": "/static/js/main.5f05d96f.chunk.js"
+    "revision": "5b0e8c9eb894346a5f1d",
+    "url": "/static/js/main.a1429a5a.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -124,20 +124,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/bolso8.34477b27.jpg"
   },
   {
-    "revision": "77b4e720a882902eb36d241bdef6c594",
-    "url": "/static/media/carousel1.77b4e720.JPG"
+    "revision": "b317f99d071d404a381018787977a622",
+    "url": "/static/media/carousel1.b317f99d.jpg"
   },
   {
-    "revision": "447009daffc1a98d57b91e45aa76e9c2",
-    "url": "/static/media/carousel2.447009da.JPG"
+    "revision": "f66ab4ffb7eb7c806a158809a14d4fbb",
+    "url": "/static/media/carousel2.f66ab4ff.jpg"
   },
   {
-    "revision": "56acb8d9a9478c99fba150bd48b0b7d2",
-    "url": "/static/media/carousel3.56acb8d9.JPG"
-  },
-  {
-    "revision": "18e655147b63c1f77e11cb135dc42a17",
-    "url": "/static/media/carousel4.18e65514.JPG"
+    "revision": "a9f610b9cad3617529d6b705ac95b876",
+    "url": "/static/media/carousel3.a9f610b9.jpg"
   },
   {
     "revision": "a605c085746add0e52689096bee8538d",

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import "./blurredCarrousel.css";
 import { Fade } from 'react-slideshow-image';
-import carousel1 from "./carousel1.JPG";
-import carousel2 from "./carousel2.JPG";
-import carousel3 from "./carousel3.JPG";
-import carousel4 from "./carousel4.JPG";
+import carousel1 from "./carousel1.jpg";
+import carousel2 from "./carousel2.jpg"
+import carousel3 from "./carousel3.jpg";
 
 class BlurredCarousel extends Component {
     state = {
@@ -13,7 +12,6 @@ class BlurredCarousel extends Component {
             carousel1,
             carousel2,
             carousel3,
-            carousel4
         ],
 
         fadeProperties: {

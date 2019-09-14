@@ -14,19 +14,24 @@ class HomePage extends Component {
     state = {
         productosDestacados: [
             {
-                rutaImagen: bolso2,
-                nombre: 'Bolso 2',
-                precio: '$100,000'
+                imagen: "https://res.cloudinary.com/drfggfn8f/image/upload/v1568469505/macco/bolsos/eik0rmakvxoy75ndc1ff.jpg",
+                nombre: 'Tula Hermes',
+                precio: '140000'
             },
             {
-                rutaImagen: bolso8,
-                nombre: 'Bolso 8',
-                precio: '$100,000'
+                imagen: "https://res.cloudinary.com/drfggfn8f/image/upload/v1568469506/macco/bolsos/aqjej6fhr6vgyherv1nc.jpg",
+                nombre: 'Buyuwant',
+                precio: '250000'
             },
             {
-                rutaImagen: bolso6,
-                nombre: 'Bolso 6',
-                precio: '$100,000'
+                imagen: "https://res.cloudinary.com/drfggfn8f/image/upload/v1568469503/macco/bolsos/mqlbjdsibeahnblt68cg.jpg",
+                nombre: 'Hexagonal Pequeño',
+                precio: '60000'
+            },
+            {
+                imagen: "https://res.cloudinary.com/drfggfn8f/image/upload/v1568253636/macco/bolsos/randflmwmgrenm4s4dcn.jpg",
+                nombre: 'Bolso de Lujo Lacatu',
+                precio: '250000'
             }
         ]
     }
@@ -35,7 +40,7 @@ class HomePage extends Component {
             <React.Fragment>
                 <BlurredCarousel />
                 <h1>Productos Destacados</h1>
-                <Catalogo productos={this.state.productosDestacados} />
+                <Catalogo productos={this.state.productosDestacados} filtro={false} />
             </React.Fragment>
         );
     }

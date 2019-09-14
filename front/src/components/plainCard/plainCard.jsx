@@ -8,9 +8,14 @@ class PlainCard extends Component {
     return (
       <div id="rectangleGris">
         <img id="imagen" src={this.props.rutaImagen} />
-
         <h1>{this.props.nombre}</h1>
         <h2>{this.props.precio}</h2>
+        {this.props.promocion &&
+          <div id="promocion">PROMOCION</div>
+        }
+        {(this.props.cantidad === 0) &&
+          <div id="noDisponible">NO DISPONIBLE</div>
+        }
         {this.props.autenticado &&
           <button id="botonEditar" >
             <img id="iconoEditar" src={edit} alt="" />
