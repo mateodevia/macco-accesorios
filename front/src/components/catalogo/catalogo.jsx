@@ -55,9 +55,9 @@ class Catalogo extends Component {
 
 
   handleClose() {
-    this.setState((state)=>{
+    this.setState((state) => {
 
-      return {uploading:false};
+      return { uploading: false };
     });
   }
 
@@ -152,17 +152,17 @@ class Catalogo extends Component {
         <div className="row justify-content-center">
           {this.state.productosAPintar.map(
             producto =>
-              < PlainCard autenticado={this.props.autenticado} key={producto._id} id={producto._id} rutaImagen={producto.imagen} nombre={producto.nombre} precio={producto.precio} cantidad={producto.cantidad} promocion={producto.promocion} />
+              < PlainCard refresh={this.props.refresh} autenticado={this.props.autenticado} key={producto._id} id={producto._id} rutaImagen={producto.imagen} nombre={producto.nombre} precio={producto.precio} cantidad={producto.cantidad} promocion={producto.promocion} />
           )}
         </div>
         <button onClick={this.handleClick}>heyyyyyyy</button>
-        {this.state.uploading &&   <div className="modal" id="myModal">
-       <div className="modal-content">
-    <button className="close" onClick={this.handleClose}>x</button>
-          <p>Some text in the Modal..</p>
+        {this.state.uploading && <div className="modal" id="myModal">
+          <div className="modal-content">
+            <button className="close" onClick={this.handleClose}>x</button>
+            <p>Some text in the Modal..</p>
           </div>
         </div>}
-        
+
 
       </div>
     );
