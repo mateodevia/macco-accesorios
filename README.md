@@ -5,6 +5,7 @@ A public page for selling
 
 EL objetivo del proyecto es crear una paguina web que tenga las siguientes caracteristicas.
 *Que sirva como presentacion para macco accesorios
+
 *Que tenga componentes muy generales para ser reusados por otras paguinas
 
 
