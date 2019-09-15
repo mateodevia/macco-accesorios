@@ -36,7 +36,7 @@ EL objetivo del proyecto es crear una paguina web que tenga las siguientes carac
 https://docs.google.com/presentation/d/1_JCQYNdjgicMWYEA7RWCGMWbXwMeIidspT_0GVMxK2k/edit#slide=id.g5f31d90c27_0_1
 https://lfnaranjo11.github.io/leonelNaranjoHomePage/
 
-**Autores 
+**Autores** 
 Leonel Francisco Naranjo Forero 
 github.com/lfnaranjo11
 
@@ -44,8 +44,10 @@ Mateo Devia Vega
 
 github.com/mateodevia
 
- **Un screenshot**
+**presentacion**
  https://docs.google.com/presentation/d/11htPrUUYEvRCPf2PqA2cRUAN_Mrd6PFuMnqOzcQWTiA/edit?usp=sharing
+
+ **Un screenshot**
  
 ![image](https://drive.google.com/uc?export=view&id=17wg7_LenCjFosHBwS3e9Nz_DnXaTdIqv)
 
