@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.aa4254cb.chunk.css",
-    "main.js": "/static/js/main.e221a669.chunk.js",
-    "main.js.map": "/static/js/main.e221a669.chunk.js.map",
+    "main.css": "/static/css/main.623865f2.chunk.css",
+    "main.js": "/static/js/main.242a13cb.chunk.js",
+    "main.js.map": "/static/js/main.242a13cb.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.0e8573d5.chunk.css": "/static/css/2.0e8573d5.chunk.css",
-    "static/js/2.933365a9.chunk.js": "/static/js/2.933365a9.chunk.js",
-    "static/js/2.933365a9.chunk.js.map": "/static/js/2.933365a9.chunk.js.map",
+    "static/css/2.1d7cc79d.chunk.css": "/static/css/2.1d7cc79d.chunk.css",
+    "static/js/2.9835c1a4.chunk.js": "/static/js/2.9835c1a4.chunk.js",
+    "static/js/2.9835c1a4.chunk.js.map": "/static/js/2.9835c1a4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8818d13838f12525d71da1575409b0c6.js": "/precache-manifest.8818d13838f12525d71da1575409b0c6.js",
+    "precache-manifest.c3b4bc7c319db042987a321102af9a74.js": "/precache-manifest.c3b4bc7c319db042987a321102af9a74.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.0e8573d5.chunk.css.map": "/static/css/2.0e8573d5.chunk.css.map",
-    "static/css/main.aa4254cb.chunk.css.map": "/static/css/main.aa4254cb.chunk.css.map",
+    "static/css/2.1d7cc79d.chunk.css.map": "/static/css/2.1d7cc79d.chunk.css.map",
+    "static/css/main.623865f2.chunk.css.map": "/static/css/main.623865f2.chunk.css.map",
     "static/media/aretes.JPG": "/static/media/aretes.e50d9f94.JPG",
     "static/media/aretes1.JPG": "/static/media/aretes1.eedf937b.JPG",
     "static/media/aretes10.JPG": "/static/media/aretes10.76d95711.JPG",
@@ -46,6 +46,7 @@
     "static/media/instagram.svg": "/static/media/instagram.5de1b6eb.svg",
     "static/media/pencil.svg": "/static/media/pencil.5c6a6e56.svg",
     "static/media/recycle.svg": "/static/media/recycle.ac56c78c.svg",
+    "static/media/shopping-bag.svg": "/static/media/shopping-bag.2f33b291.svg",
     "static/media/whatsapp.svg": "/static/media/whatsapp.300c9034.svg"
   }
 }

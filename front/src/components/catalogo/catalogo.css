@@ -18,23 +18,26 @@
 
 
   }
-  
+
   .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
-    height: 100%
+    width: 80%;
     /* Could be more or less, depending on screen size */
   }
   /* The Modal (background) */
 /* The Close Button */
 .close {
   color: #aaa;
+  background-color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .close:hover,
@@ -42,4 +45,42 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+#botonAgregar{
+background-color: #1e5128;
+color: white;
+border-radius: 8px;
+border: none;
+outline: none;
+cursor: pointer;
+height: 40px;
+width: 80px;
+margin:10px;
+}
+
+#contenedorBotonAgregar {
+  text-align: center;
+}
+
+.botonFormulario {
+	border-radius: 20px;
+	border: 1px solid #800349;
+	background-color: #800349;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+	outline: none;
+	cursor: pointer;
+}
+
+.centrarTodo {
+  text-align: center;
 }

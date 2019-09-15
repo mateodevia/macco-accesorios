@@ -6,15 +6,15 @@ import edit from "./pencil.svg";
 import EditPage from "../EditPage/EditPage";
 
 class PlainCard extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       editing: false,
 
     }
 
   }
-  
+
   borrarItem = (id) => {
     let promise = axios.delete("/crudBolsos/" + id, {
       headers: {
@@ -30,19 +30,20 @@ class PlainCard extends Component {
     promise.catch((err) => { alert(err) });
   }
 
-  editarItem=()=> {
+  editarItem = () => {
+    window.scrollTo(0, 0);
     this.setState((state) => {
 
       return { editing: true };
     });
   }
-  handleClose= () => {
+  handleClose = () => {
     this.setState((state) => {
 
       return { editing: false };
     });
   }
-  
+
 
 
   render() {
@@ -61,21 +62,21 @@ class PlainCard extends Component {
         }
         {
           this.props.autenticado &&
-          <button id="botonEditar" onClick={()=>this.editarItem(this.props.id)} >
+          <button id="botonEditar" onClick={() => this.editarItem(this.props.id)} >
             <img id="iconoEditar" src={edit} alt="" />
           </button>
         }
         {
           this.props.autenticado &&
           <button id="botonBorrar" onClick={() => this.borrarItem(this.props.id)}>
-            <img id="iconoBorrar" src={trash}  width="15%" height="15%" alt="" />
+            <img id="iconoBorrar" src={trash} width="15%" height="15%" alt="" />
           </button>
         }
         {this.state.editing && <div className="modal" id="myModal">
           <div className="modal-content">
             <button className="close" onClick={this.handleClose}>x</button>
             <div>
-            <EditPage id={this.props.id} refresh={this.props.refresh} handleClose={this.handleClose}/>
+              <EditPage id={this.props.id} refresh={this.props.refresh} handleClose={this.handleClose} />
             </div>
           </div>
         </div>}

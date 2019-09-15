@@ -8,7 +8,7 @@ class FileChooser extends Component {
       images: [],
       imageUrls: [],
       message: '',
-      imagen_main_url:null,
+      imagen_main_url: null,
     }
   }
   selectImages = (event) => {
@@ -30,9 +30,10 @@ class FileChooser extends Component {
           "Content-Type": "application/x-www-form-urlencoded"
         }
       })
-        .then(res => {console.log(res.data)
-           console.log(this.state);
-           this.props.receiveURLs(res.data);         
+        .then(res => {
+          console.log(res.data)
+          console.log(this.state);
+          this.props.receiveURLs(res.data);
         }).then(
           console.log(this.state)
 
@@ -42,7 +43,7 @@ class FileChooser extends Component {
     });
   }
 
-  showState(){
+  showState() {
 
   }
 
@@ -63,15 +64,15 @@ class FileChooser extends Component {
       <div>
         <br />
         <div >
-          <h1>Image Uploader</h1><hr />
+          <h1>Sube una imagen</h1><hr />
           <div >
-            <input className="form-control " type="file"
+            <input className="botonFormulario" className="form-control " type="file"
               onChange={this.selectImages} multiple />
           </div>
           <p className="text-info">{this.state.message}</p>
           <div>
-            <button type="button" value="Submit"
-              onClick={this.uploadImages}>Submit
+            <button className="botonFormulario" type="button" value="Submit"
+              onClick={this.uploadImages}>Agregar
             </button>
           </div>
         </div>

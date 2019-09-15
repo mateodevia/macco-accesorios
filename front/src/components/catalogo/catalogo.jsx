@@ -23,6 +23,7 @@ class Catalogo extends Component {
   }
 
   handleClick() {
+    window.scrollTo(0, 0);
     this.setState((state) => {
 
       return { uploading: true };
@@ -156,18 +157,24 @@ class Catalogo extends Component {
               < PlainCard refresh={this.props.refresh} autenticado={this.props.autenticado} key={producto._id} id={producto._id} rutaImagen={producto.imagen} nombre={producto.nombre} precio={producto.precio} cantidad={producto.cantidad} promocion={producto.promocion} />
           )}
         </div>
-        <button onClick={this.handleClick}>heyyyyyyy</button>
-        {this.state.uploading && <div className="modal" id="myModal">
-          <div className="modal-content">
-            <button className="close" onClick={this.handleClose}>x</button>
-            <div>
-            <UploadPage refresh={this.props.refresh} handleClose={this.handleClose}/>
+        {this.props.autenticado &&
+          <div id="contenedorBotonAgregar">
+            < button id="botonAgregar" onClick={this.handleClick}>Agregar</button>
+          </div>
+        }
+        {
+          this.state.uploading && <div className="modal" id="myModal">
+            <div className="modal-content">
+              <button className="close" onClick={this.handleClose}>x</button>
+              <div>
+                <UploadPage refresh={this.props.refresh} handleClose={this.handleClose} />
+              </div>
             </div>
           </div>
-        </div>}
+        }
 
 
-      </div>
+      </div >
     );
   }
 }

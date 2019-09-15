@@ -79,7 +79,7 @@ padding-bottom: 5px;
     font-size: 20px;
     float: right;
 
-   
+
 }
 .precio{
   width:100%;
@@ -103,7 +103,7 @@ padding-bottom: 5px;
     cursor: pointer;
 
   }
-  
+
   #rojo {
     background-color: rgb(223, 19, 19);
     height: 19px;
@@ -116,11 +116,11 @@ padding-bottom: 5px;
     font-size: 10px;
     margin: 4px 2px;
     cursor: pointer;
-    
+
 
 
   }
-  
+
   #blanco {
     background-color: white;
     border:  1px solid #800e49;
@@ -132,7 +132,7 @@ padding-bottom: 5px;
     text-align: center;
     border-radius: 25px;
   }
-  
+
   #azul {
     background-color: darkblue;
     border: 1px blue;
@@ -142,7 +142,7 @@ padding-bottom: 5px;
     border-radius: 25px;
     margin: 4px 2px;
   }
-  
+
   #verde {
     background-color: green;
     height: 19px;
@@ -154,7 +154,7 @@ padding-bottom: 5px;
     font-size: 10px;
 
   }
-  
+
   #rosado {
     background-color: pink;
     height: 19px;
@@ -165,7 +165,7 @@ padding-bottom: 5px;
     border:none;
     font-size: 10px;
   }
-  
+
   #cafe {
     background-color: rgb(156, 114, 60);
     height: 19px;
@@ -176,7 +176,7 @@ padding-bottom: 5px;
     border:none;
     font-size: 10px;
   }
-  
+
   #fucsia {
     background-color: rgba(255, 0, 55, 0.74);
     height: 19px;
@@ -187,7 +187,7 @@ padding-bottom: 5px;
     border:none;
     font-size: 10px;
   }
-  
+
   #azulClaro {
     font-size: 10px;
  background-color: rgb(192, 242, 255);
@@ -201,7 +201,7 @@ padding-bottom: 5px;
 
 
   }
-  
+
   #amarillo {
     background-color: yellow;
     height: 19px;
@@ -214,7 +214,7 @@ padding-bottom: 5px;
 
 
   }
-  
+
   #avano {
     background-color: rgba(240, 208, 170, 0.767);
     height: 19px;
@@ -227,27 +227,24 @@ padding-bottom: 5px;
 
 
   .pequeno{
+    background-color: white;
     margin-top: 35px;
     margin-bottom: 1px;
-        width:8%;
-    height:40px;
+    width:8%;
+    height:60px;
     top: 50%;
-    border:none;
-    }
-    .pequeno_imagen{
-      border:none;
-    }
-    
+    border: none;
+  }
+
 .mediano{
+    background-color: white;
     top: 50%;
     margin-left:27px;
     width:10%;
     border:none;
   }
-  .mediano_imagen{
-    border:none;
-  }
 .grande{
+    background-color: white;
     top: 50%;
     margin-bottom: 13px;
     border:none;
@@ -257,8 +254,8 @@ padding-bottom: 5px;
     text-align:left;
     border:none;
 }
-.grande_imagen{
-  border:none;
+.imagenTamaño{
+  height: 100%;;
 }
 
 
@@ -279,13 +276,13 @@ padding-bottom: 5px;
 
 }
 .submit{
-    
+
 }
 .column {
     float: left;
     width: 50%;
   }
-  
+
   /* Clear floats after the columns */
   .row:after {
     content: "";
@@ -299,7 +296,7 @@ padding-bottom: 5px;
     width: 60px;
     height: 34px;
   }
-  
+
   .slider {
     position: absolute;
     cursor: pointer;
@@ -311,7 +308,7 @@ padding-bottom: 5px;
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
+
   .slider:before {
     position: absolute;
     content: "";
@@ -323,12 +320,12 @@ padding-bottom: 5px;
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
-  
+
+
   input:checked + .slider {
     background-color: #2196F3;
   }
-  
+
   input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
   }
@@ -339,4 +336,16 @@ padding-bottom: 5px;
   }
   #imagenPreview{
     height: 150px;
+  }
+
+  .tamañoSeleccionado{
+    height: 5px;
+    width: 100%;
+    background-color: #1e5128;
+  }
+  .colorSeleccionado{
+    height: 5px;
+    width: 60px;
+    background-color: #1e5128;
+    margin: 5px;
   }
