@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import NoDisponible from '../noDisponible/noDisponible';
-import "../styles/general.css";
 import "./uploadPage.css";
 import FileChooser from '../fileChooser/fileChooser';
 import axios from "axios";
 import purse from "./shopping-bag.svg";
 
-class uploadPage extends Component {
+class UploadPage extends Component {
   constructor(props){
     super(props);
     this.state = { autenticado: false,
@@ -34,6 +32,8 @@ class uploadPage extends Component {
     this.handleChangePrecio = this.handleChangePrecio.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.receiveURLs = this.receiveURLs.bind(this);
+    this.handleChangeColor = this.handleChangeColor.bind(this);
+    
   }
   
   
@@ -54,13 +54,25 @@ class uploadPage extends Component {
     let promesa1 = axios.post("/crudBolsos", bolso);
       promesa1.then((res) => {
     });
-    promesa1.catch(() => console.log("no se pudo comunicar con el servidor"));
+      promesa1.catch(() => console.log("no se pudo comunicar con el servidor"));
   };
+
    
   handleChangeName(event)
   {
     this.setState({nameValue: event.target.value});
   };
+  handleChangeColor(col){
+    let promise1=new Promise((resolve,reject)=>{
+      this.setState({colorValue:col});
+      resolve(col)
+    }
+    );
+    promise1.then((col)=>console.log(this.state.colorValue));
+    
+
+    console.log("mousehover");
+  }
   handleChangeDescription(event)
   {
     this.setState({descriptionValue: event.target.value});
@@ -69,13 +81,24 @@ class uploadPage extends Component {
   {
     this.setState({cantidadValue: event.target.value});
   };
-  handleChangeTamano(event)
+  handleChangeTamano(valor)
   {
-    this.setState({tamanoValue: event.target.value});
+    let promise_x=new Promise((resolve,reject)=>{
+      this.setState({tamanoValue: valor});
+        resolve('x');
+    });
+    promise_x.then((mensaje)=>console.log(this.state,mensaje));  
   };
-  handleChangePromocion(event)
+  handleChangePromocion()
   {
-    this.setState({promocionValue: event.target.value});
+    let promise_Prom=new Promise((resolve,reject)=>{
+      console.log("actual",this.state.promocionValue);
+      let promo = !this.state.promocionValue;
+      this.setState({promocionValue:promo});
+      resolve(this.state.promocionValue);
+    });
+    
+    promise_Prom.then((estado)=>{console.log("nuevo",this.state.promocionValue)});
   };
   handleChangePrecio(event)
   {
@@ -89,11 +112,9 @@ class uploadPage extends Component {
     
     console.log(this.state.imagenValue);
   };
-
+ 
 
   render() {
-
-
     return (
       <div>
         <span className=""> Agregar un producto al catalogo</span>
@@ -125,13 +146,55 @@ class uploadPage extends Component {
             </div>
             <div id="lineaRoja" ></div>
             <div className="fila">
-              <button className="pequeno"><img className="pequeno_imagen" src={purse} alt="flat_icon_purse"/></button>
-              <button type="button" className="mediano"><img src={purse} alt="flat_icon_purse"/></button>
-              <button type="button" className="grande"><img src={purse} alt="flat_icon_purse"/></button>
-
+              <button type="button" className="pequeno">
+                <img className="equeno_imagen" src={purse} alt="flat_icon_purse" onClick={() => this.handleChangeTamano("pequeno")}/>
+                </button>
+              <button type="button" value="mediano" onClick={() => this.handleChangeTamano("mediano")}className="mediano">
+                <img src={purse} alt="flat_icon_purse"/>
+                </button>
+              <button type="button" className="grande" onClick={()=>this.handleChangeTamano("grande")}>
+                <img src={purse} alt="flat_icon_purse"/>
+                </button>
             </div>
-             
+            <div id="lineaRoja" ></div>
+            <div className="fila">
+              <button type="button" id="negro" onMouseEnter={()=>this.handleChangeColor("negro")}>Negro
+              </button>
+              <button type="button" id="blanco" onMouseEnter={()=>this.handleChangeColor("blanco")}>Blanco
+              </button>
+              <button type="button" id="azul" onMouseEnter={()=>this.handleChangeColor("azul")}>azul
+              </button>
+              <button type="button" id="azulClaro" onMouseEnter={()=>this.handleChangeColor("azulClaro")}>azulClaro
+              </button>
+              <button type="button" id="fucsia" onMouseEnter={()=>this.handleChangeColor("fucsia")}>fucsia
+              </button>
+              <button type="button" id="cafe" onMouseEnter={()=>this.handleChangeColor("cafe")}>cafe
+              </button>
+              <button type="button" id="verde" onMouseEnter={()=>this.handleChangeColor("verde")}>verde
+              </button>
+              <button type="button" id="rosado" onMouseEnter={()=>this.handleChangeColor("rosado")}>rosado
+              </button>
+              <button type="button" id="avano" onMouseEnter={()=>this.handleChangeColor("avano")}>avano
+              </button>
+              <button type="button" id="amarillo" onMouseEnter={()=>this.handleChangeColor("amarillo")}>Amarillo
+              </button>
+              <button type="button" id="rojo" onMouseEnter={()=>this.handleChangeColor("rojo")}>rojo
+              </button>
+            </div>
+            <div id="lineaRoja"></div>
+            <div className="fila">
+              <button type="button" id="promocion" >PRomocion
+              </button>
+              <label className="switch">
+                <input id="PROMO"type="checkbox"  name="precio" defaultChecked={this.state.promocionValue} onChange={() => this.handleChangePromocion() }/>
+                <span className="slider"></span>
+            </label>
+          </div>
+           
+              
 
+            
+             
             <div id="lineaRoja" ></div>
             
 
@@ -150,4 +213,4 @@ class uploadPage extends Component {
   }
 }
 
-export default uploadPage;
+export default UploadPage;

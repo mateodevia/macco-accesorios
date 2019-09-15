@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./catalogo.css";
 import PlainCard from "../plainCard/plainCard";
 import SideDrawer from "../sideDrawer/sideDrawer";
+import UploadPage from "../uploadPage/uploadPage";
 
 class Catalogo extends Component {
 
@@ -159,7 +160,9 @@ class Catalogo extends Component {
         {this.state.uploading && <div className="modal" id="myModal">
           <div className="modal-content">
             <button className="close" onClick={this.handleClose}>x</button>
-            <p>Some text in the Modal..</p>
+            <div>
+            <UploadPage/>
+            </div>
           </div>
         </div>}
 
