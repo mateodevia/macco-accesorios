@@ -7,7 +7,8 @@ class FileChooser extends Component {
     this.state = {
       images: [],
       imageUrls: [],
-      message: ''
+      message: '',
+      imagen_main_url:null,
     }
   }
   selectImages = (event) => {
@@ -29,10 +30,20 @@ class FileChooser extends Component {
           "Content-Type": "application/x-www-form-urlencoded"
         }
       })
-        .then(res => console.log(res.data))
+        .then(res => {console.log(res.data)
+           console.log(this.state);
+           this.props.receiveURLs(res.data);         
+        }).then(
+          console.log(this.state)
+
+        )
         .catch(() => console.log(`no se pudo subir la imagen ${image.name}`))
 
     });
+  }
+
+  showState(){
+
   }
 
   mongo = () => {

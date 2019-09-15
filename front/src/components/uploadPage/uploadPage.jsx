@@ -3,7 +3,8 @@ import NoDisponible from '../noDisponible/noDisponible';
 import "../styles/general.css";
 import "./uploadPage.css";
 import FileChooser from '../fileChooser/fileChooser';
-
+import axios from "axios";
+import purse from "./shopping-bag.svg";
 
 class uploadPage extends Component {
   constructor(props){
@@ -15,19 +16,16 @@ class uploadPage extends Component {
       cantidadValue: null,
       precioValue: null,
       cantidadValue: null,
-
-      values:{
-        name:null,
-        descripcion:null,
-        precio:null,
-        cantidad:null,
-      },
+      imagenValue: null,
+      promocionValue: true,
+      colorValue: null,
+      tamañoValue: null,
+      imgsUploaded: false,
       descripcion: {
         width:"100%",
         height:"20px",
       }
     };
-    this.resize=this.resize.bind(this);
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeDescription = this.handleChangeDescription.bind(this);
     this.handleChangeTamano = this.handleChangeTamano.bind(this);
@@ -35,38 +33,64 @@ class uploadPage extends Component {
     this.handleChangeCantidad = this.handleChangeCantidad.bind(this);
     this.handleChangePrecio = this.handleChangePrecio.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
+    this.receiveURLs = this.receiveURLs.bind(this);
   }
-
   
-  handleSubmit(event){
+  
+  handleSubmit(event)
+  {
     console.log(this.state);
     alert('A name was submitted: ' + this.state.nameValue);
     event.preventDefault();
-  } 
-  handleChangeName(event){
+    let bolso={};
+    bolso.nombre=this.state.nameValue;
+    bolso.precio=this.state.precioValue;
+    bolso.color="negro";
+    bolso.tamaño="pequeño";
+    bolso.imagen=this.state.imagenValue;
+    bolso.cantidad=this.state.cantidadValue;
+    bolso.promocion=false;
+
+    let promesa1 = axios.post("/crudBolsos", bolso);
+      promesa1.then((res) => {
+    });
+    promesa1.catch(() => console.log("no se pudo comunicar con el servidor"));
+  };
+   
+  handleChangeName(event)
+  {
     this.setState({nameValue: event.target.value});
   };
-  handleChangeDescription(event){
+  handleChangeDescription(event)
+  {
     this.setState({descriptionValue: event.target.value});
   };
-  handleChangeCantidad(event){
+  handleChangeCantidad(event)
+  {
     this.setState({cantidadValue: event.target.value});
   };
-  handleChangeTamano(event){
+  handleChangeTamano(event)
+  {
     this.setState({tamanoValue: event.target.value});
   };
-  handleChangePromocion(event){
+  handleChangePromocion(event)
+  {
     this.setState({promocionValue: event.target.value});
   };
-  handleChangePrecio(event){
+  handleChangePrecio(event)
+  {
     this.setState({precioValue: event.target.value});
   };
+  receiveURLs(URL)
+  {
+    this.setState({imagenValue: URL,
+      imgsUploaded: true,
+    });
+    
+    console.log(this.state.imagenValue);
+  };
 
-resize(){
- 
 
-};
   render() {
 
 
@@ -83,17 +107,34 @@ resize(){
               
             </div>
             <div id="lineaRoja" ></div>
-            <FileChooser />
+            {
+              this.state.imgsUploaded && <div> 
+                holA 
+                <img src={this.state.imagenValue} alt={this.state.descriptionValue}/> </div>
+            }
+            
+            <FileChooser receiveURLs={this.receiveURLs}  />
             <div id="lineaRoja" ></div>
             <div className="fila">
               <input className="descripcion" onKeyPress={this.resize}  height="40px"  name="description" placeholder="Describa el producto aqui"  value={this.state.descripcionValue} onChange={this.handleChangeDescription}/>
             </div>
             <div id="lineaRoja" ></div>
             <div className="fila">
-                <input type="number" placeholder="precio"  className="precio" min="0" name="precio" value={this.state.precioValue} onChange={this.handleChangePrecio} />
-                <input type="number" placeholder="cantidad"  className="cantidad" min="0" name="cantidad"  value={this.state.cantidadValue} onChange={this.handleChangeCantidad}/>
+              <input type="number" placeholder="precio"  className="precio" min="0" name="precio" value={this.state.precioValue} onChange={this.handleChangePrecio} />
+              <input type="number" placeholder="cantidad"  className="cantidad" min="0" name="cantidad"  value={this.state.cantidadValue} onChange={this.handleChangeCantidad}/>
             </div>
             <div id="lineaRoja" ></div>
+            <div className="fila">
+              <button className="pequeno"><img className="pequeno_imagen" src={purse} alt="flat_icon_purse"/></button>
+              <button type="button" className="mediano"><img src={purse} alt="flat_icon_purse"/></button>
+              <button type="button" className="grande"><img src={purse} alt="flat_icon_purse"/></button>
+
+            </div>
+             
+
+            <div id="lineaRoja" ></div>
+            
+
             <div className="fila"></div>
             <div id="lineaVerde" className=""></div>
             <div className="fila">

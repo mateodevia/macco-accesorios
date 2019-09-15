@@ -144,7 +144,6 @@ router.get("/:bolsoId", (req, res) => {
 
 router.post("", (req, res) => {
   let body = req.body;
-
   postCallBack(body,
     (bolso) => res.json(bolso),
     (err) => res.json(err)
