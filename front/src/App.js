@@ -47,7 +47,7 @@ class App extends Component {
         <Route path="/collares" render={(props) => <CollaresPage {...props} autenticado={this.state.autenticado} />} />
         <Route path="/pulseras" render={(props) => <PulserasPage {...props} autenticado={this.state.autenticado} />} />
         <Route path="/swarosky" render={(props) => <SwaroskyPage {...props} autenticado={this.state.autenticado} />} />
-        <Route path="/novias" render={(props) => <uploadPage {...props} autenticado={this.state.autenticado} />} />
+        <Route path="/novias" component={uploadPage} />
         <Route path="/" render={(props) => <Footer {...props} autenticado={this.state.autenticado} handleCerrarSesion={this.handleCerrarSesion} />} />
       </HashRouter>
     );

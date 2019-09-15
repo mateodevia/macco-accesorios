@@ -13,6 +13,8 @@ class Catalogo extends Component {
       productosAPintar: props.productos
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+
   }
 
   componentWillReceiveProps(newProps) {
@@ -49,6 +51,14 @@ class Catalogo extends Component {
 
     newState.productosAPintar = nuevaListaAPintar;
     this.setState(newState);
+  }
+
+
+  handleClose() {
+    this.setState((state)=>{
+
+      return {uploading:false};
+    });
   }
 
   handlerFiltroPrecio = (precios) => {
@@ -146,11 +156,13 @@ class Catalogo extends Component {
           )}
         </div>
         <button onClick={this.handleClick}>heyyyyyyy</button>
-        {this.state.uploading &&
-          <div id="modal"> <div className="modalContent">    Lorem, ipsum dolor sit a earum explicabo, tentiuepellat porro dolor.
+        {this.state.uploading &&   <div className="modal" id="myModal">
+       <div className="modal-content">
+    <button className="close" onClick={this.handleClose}>x</button>
+          <p>Some text in the Modal..</p>
           </div>
-          </div>
-        }
+        </div>}
+        
 
       </div>
     );

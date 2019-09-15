@@ -8,7 +8,8 @@ import FileChooser from '../fileChooser/fileChooser';
 class uploadPage extends Component {
   constructor(props){
     super(props);
-    this.state = { namePage: 'Macco Accesorios',
+    this.state = { autenticado: false,
+      namePage: 'Macco Accesorios',
       nameValue: null,
       descriptionValue: null,
       cantidadValue: null,
