@@ -57,7 +57,7 @@ class PlainCard extends Component {
           <div id="promocion">PROMOCION</div>
         }
         {
-          (this.props.cantidad === 0) &&
+          (this.props.cantidad == 0) &&
           <div id="noDisponible">NO DISPONIBLE</div>
         }
         {

@@ -38,7 +38,7 @@ class LoginForm extends Component {
             <form id="formulario" onSubmit={this.handleSubmit}>
               <h1>¡Bienvenido Administrador!</h1>
               <input className="campoTexto" type="text" placeholder="Usuario" ref={this.usuario} />
-              <input className="campoTexto" type="text" placeholder="Contraseña" ref={this.clave} />
+              <input className="campoTexto" type="password" placeholder="Contraseña" ref={this.clave} />
               <input className="boton" type="submit" value="Submit" />
             </form>
           </div>
