@@ -1,20 +1,25 @@
+// eslint-disable-next-line no-unused-vars
 import React, { Component } from "react";
 import "./navbar.css";
 import titulo from "./icono.jpeg";
 
 class NavBar extends Component {
-  state = {
-    isOpen: false,
-    titulos: [
-      { nombre: 'Bolsos', ruta: '/#/bolsos' },
-      { nombre: 'Aretes', ruta: '/#/aretes' },
-      { nombre: 'Collares', ruta: '/#/collares' },
-      { nombre: 'Pulseras', ruta: '/#/pulseras' },
-      { nombre: 'Swarosky', ruta: '/#/swarosky' },
-      { nombre: 'Novias', ruta: '/#/novias' }
-    ],
-    selected: 'Inicio'
-  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false,
+      titulos: [
+        { nombre: "Bolsos", ruta: "/#/bolsos" },
+        { nombre: "Aretes", ruta: "/#/aretes" },
+        { nombre: "Collares", ruta: "/#/collares" },
+        { nombre: "Pulseras", ruta: "/#/pulseras" },
+        { nombre: "Swarosky", ruta: "/#/swarosky" },
+        { nombre: "Novias", ruta: "/#/novias" }
+      ],
+      selected: "Inicio"
+    };
+  }
   render() {
     return (
       <div id='barraSticky'>
@@ -33,13 +38,13 @@ class NavBar extends Component {
                   return (
                     < li id="titulo" key={titulo.nombre} >
                       <a onClick={() => this.handleClick(titulo.nombre)} href={titulo.ruta}>{titulo.nombre}</a>
-                    </li>)
+                    </li>);
                 }
                 else {
                   return (
                     < li className="selected" id="titulo" key={titulo.nombre} >
                       <a onClick={() => this.handleClick(titulo.nombre)} href={titulo.ruta}>{titulo.nombre}</a>
-                    </li>)
+                    </li>);
                 }
               }
             )}
@@ -53,13 +58,13 @@ class NavBar extends Component {
                     return (
                       < li id="titulo" key={titulo.nombre} >
                         <a onClick={() => this.handleClick(titulo.nombre)} href={titulo.ruta}>{titulo.nombre}</a>
-                      </li>)
+                      </li>);
                   }
                   else {
                     return (
                       < li className="selectedOnPhone" id="titulo" key={titulo.nombre} >
                         <a onClick={() => this.handleClick(titulo.nombre)} href={titulo.ruta}>{titulo.nombre}</a>
-                      </li>)
+                      </li>);
                   }
                 }
               )}
@@ -78,7 +83,7 @@ class NavBar extends Component {
   }
   //logo click
   goHome() {
-    this.setState({ isOpen: false, selected: 'inicio' });
+    this.setState({ isOpen: false, selected: "inicio" });
   }
 }
 

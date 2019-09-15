@@ -26,7 +26,7 @@ class LoginForm extends Component {
         alert("Credenciales Invalidas");
       }
     });
-    promesa1.catch(() => console.log("no se pudo comunicar con el servidor"));
+    promesa1.catch(() => alert("no se pudo comunicar con el servidor"));
   }
 
   render() {

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { Component } from "react";
 import "./sideDrawer.css";
 import cerrado from "./arrowRight.svg";

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Catalogo from "../catalogo/catalogo";
-import Footer from "../footer/footer";
 import "../styles/general.css";
 import axios from "axios";
 
@@ -8,7 +7,6 @@ class BolsosPage extends Component {
 
   constructor(props) {
     super(props);
-    // Don't call this.setState() here!
     this.state = { productos: [] };
   }
 

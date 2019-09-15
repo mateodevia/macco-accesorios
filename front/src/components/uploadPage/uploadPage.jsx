@@ -1,5 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React, { Component } from "react";
 import "./uploadPage.css";
+// eslint-disable-next-line no-unused-vars
 import FileChooser from "../fileChooser/fileChooser";
 import axios from "axios";
 import purse from "./shopping-bag.svg";
@@ -14,7 +16,6 @@ class UploadPage extends Component {
       descriptionValue: null,
       cantidadValue: null,
       precioValue: null,
-      cantidadValue: null,
       imagenValue: null,
       promocionValue: false,
       colorValue: null,
@@ -39,7 +40,6 @@ class UploadPage extends Component {
 
 
   handleSubmit(event) {
-    console.log(this.state);
     alert("A name was submitted: " + this.state.nameValue);
     event.preventDefault();
     let bolso = {};
@@ -52,6 +52,7 @@ class UploadPage extends Component {
     bolso.promocion = this.state.promocionValue;
 
     let promesa1 = axios.post("/crudBolsos", bolso);
+    // eslint-disable-next-line no-unused-vars
     promesa1.then((res) => {
       this.props.refresh();
       this.props.handleClose();
@@ -64,15 +65,7 @@ class UploadPage extends Component {
     this.setState({ nameValue: event.target.value });
   }
   handleChangeColor(col) {
-    let promise1 = new Promise((resolve, reject) => {
-      this.setState({ colorValue: col });
-      resolve(col);
-    }
-    );
-    promise1.then((col) => console.log(this.state.colorValue));
-
-
-    console.log("mousehover");
+    this.setState({ colorValue: col });
   }
   handleChangeDescription(event) {
     this.setState({ descriptionValue: event.target.value });
@@ -81,21 +74,12 @@ class UploadPage extends Component {
     this.setState({ cantidadValue: event.target.value });
   }
   handleChangeTamano(valor) {
-    let promise_x = new Promise((resolve, reject) => {
-      this.setState({ tamanoValue: valor });
-      resolve("x");
-    });
-    promise_x.then((mensaje) => console.log(this.state, mensaje));
+    this.setState({ tamanoValue: valor });
   }
   handleChangePromocion() {
-    let promise_Prom = new Promise((resolve, reject) => {
-      console.log("actual", this.state.promocionValue);
-      let promo = !this.state.promocionValue;
-      this.setState({ promocionValue: promo });
-      resolve(this.state.promocionValue);
-    });
-
-    promise_Prom.then((estado) => { console.log("nuevo", this.state.promocionValue); });
+    // eslint-disable-next-line no-unused-vars
+    let promo = !this.state.promocionValue;
+    this.setState({ promocionValue: promo });
   }
   handleChangePrecio(event) {
     this.setState({ precioValue: event.target.value });
