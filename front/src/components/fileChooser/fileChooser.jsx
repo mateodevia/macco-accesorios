@@ -70,7 +70,7 @@ class FileChooser extends Component {
           </div>
           <p className="text-info">{this.state.message}</p>
           <div>
-            <button value="Submit"
+            <button type="button" value="Submit"
               onClick={this.uploadImages}>Submit
             </button>
           </div>

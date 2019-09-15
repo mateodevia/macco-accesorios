@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import "./uploadPage.css";
+import "./editPage.css";
 import FileChooser from '../fileChooser/fileChooser';
 import axios from "axios";
 import purse from "./shopping-bag.svg";
 
-class UploadPage extends Component {
+class EditPage extends Component {
   constructor(props){
     super(props);
     this.state = { autenticado: false,
@@ -35,6 +35,29 @@ class UploadPage extends Component {
     this.handleChangeColor = this.handleChangeColor.bind(this);
     
   }
+  componentDidMount(){
+    console.log(this.props.id);
+    let promesa = axios.get("/crudBolsos/"+this.props.id, {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      }
+    });
+    promesa.then(res => {
+      let newState ={...this.state};
+      newState.nameValue= res.data.nombre;
+      newState.cantidadValue= res.data.cantidad;
+      newState.precioValue= res.data.precio;
+      newState.imagenValue= res.data.imagen;
+      newState.promocionValue= res.data.promocion;
+      newState.colorValue= res.data.color;
+      newState.tamañoValue= res.data.tamaño;
+      newState.imgsUploaded= true;
+      
+      this.setState(newState);
+
+    });
+    promesa.catch(() => console.log("pailas"));
+  }
   
   
   handleSubmit(event)
@@ -51,12 +74,12 @@ class UploadPage extends Component {
     bolso.cantidad=this.state.cantidadValue;
     bolso.promocion=this.state.promocionValue;
 
-    let promesa1 = axios.post("/crudBolsos", bolso);
+    let promesa1 = axios.put("/crudBolsos/"+this.props.id, bolso);
       promesa1.then((res) => {
         this.props.refresh();
         this.props.handleClose();
     });
-      promesa1.catch(() => alert("no se pudo comunicar con el servidor"));
+      promesa1.catch(() => console.log("no se pudo comunicar con el servidor"));
   };
 
    
@@ -111,6 +134,8 @@ class UploadPage extends Component {
     this.setState({imagenValue: URL,
       imgsUploaded: true,
     });
+    
+    console.log(this.state.imagenValue);
   };
  
 
@@ -130,8 +155,7 @@ class UploadPage extends Component {
             <div id="lineaRoja" ></div>
             {
               this.state.imgsUploaded && <div> 
-                holA 
-                <img src={this.state.imagenValue} alt={this.state.descriptionValue}/> </div>
+                <img src={this.state.imagenValue} id="imagenPreview" alt={this.state.descriptionValue}/> </div>
             }
             
             <FileChooser receiveURLs={this.receiveURLs}  />
@@ -213,4 +237,4 @@ class UploadPage extends Component {
   }
 }
 
-export default UploadPage;
+export default EditPage;

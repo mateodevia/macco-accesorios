@@ -161,7 +161,7 @@ class Catalogo extends Component {
           <div className="modal-content">
             <button className="close" onClick={this.handleClose}>x</button>
             <div>
-            <UploadPage/>
+            <UploadPage refresh={this.props.refresh} handleClose={this.handleClose}/>
             </div>
           </div>
         </div>}
