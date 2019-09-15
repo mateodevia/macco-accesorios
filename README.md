@@ -47,7 +47,8 @@ github.com/mateodevia
  **Un screenshot**
  https://docs.google.com/presentation/d/11htPrUUYEvRCPf2PqA2cRUAN_Mrd6PFuMnqOzcQWTiA/edit?usp=sharing
  
-![image](https://drive.google.com/uc?export=view&id=1UccxsL-clr1xYb-ahYU61cm_-CDgS8Zx)
+![image](https://drive.google.com/uc?export=view&id=1UccxsL-17wg7_LenCjFosHBwS3e9Nz_DnXaTdIqv)
+
 
  **licencia MIT.**
  
