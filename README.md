@@ -34,7 +34,8 @@ EL objetivo del proyecto es crear una paguina web que tenga las siguientes carac
 **LINKS UTILES**
 
 https://docs.google.com/presentation/d/1_JCQYNdjgicMWYEA7RWCGMWbXwMeIidspT_0GVMxK2k/edit#slide=id.g5f31d90c27_0_1
-https://lfnaranjo11.github.io/leonelNaranjoHomePage/
+
+https://hidden-cove-94656.herokuapp.com/#/bolsos
 
 **Autores** 
 Leonel Francisco Naranjo Forero 
