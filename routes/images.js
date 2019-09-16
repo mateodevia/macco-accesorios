@@ -1,3 +1,4 @@
+//Se debería usar modo estricto
 var express = require("express");
 var router = express.Router();
 const fileUpload = require('express-fileupload');
@@ -6,6 +7,7 @@ const cloudinary = require('cloudinary');
 // CONFIGURATIONS
 //------------------------------------------------------------------------------------------------
 
+//Al parecer el despliegue no quedó bien con todo lo que tenia el codigo
 //Cloudinary conf
 cloudinary.config({
   cloud_name: 'drfggfn8f',
