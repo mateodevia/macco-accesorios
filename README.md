@@ -19,6 +19,8 @@ EL objetivo del proyecto es crear una paguina web que tenga las siguientes carac
 * css
 * mlab(mongo)
 * clouddinary
+**funciones**
+para ingresar como administrador hace falta colocar https://hidden-cove-94656.herokuapp.com/#/administrador e ingresar usuario:macco y contraseña:julios31. esto mostrara funcionalidades extra para editar los bolsos, eliminarlos y agregarlos
  
 **Como correr localmente**
 
