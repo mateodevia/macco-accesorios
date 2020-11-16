@@ -3,7 +3,7 @@ import Catalogo from '../catalogo/catalogo';
 import '../styles/general.css';
 import axios from 'axios';
 
-class BolsosPage extends Component {
+class TennisPage extends Component {
     constructor(props) {
         super(props);
         this.state = { productos: [] };
@@ -11,7 +11,7 @@ class BolsosPage extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
-        let promesa = axios.get('/crudBolsos', {
+        let promesa = axios.get('/crudTennis', {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
@@ -23,7 +23,7 @@ class BolsosPage extends Component {
     }
 
     refresh = () => {
-        let promesa = axios.get('/crudBolsos', {
+        let promesa = axios.get('/crudTennis', {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
@@ -43,7 +43,7 @@ class BolsosPage extends Component {
                     />
                 </div>
                 <Catalogo
-                    url={'crudBolsos'}
+                    url={'crudTennis'}
                     productos={this.state.productos}
                     autenticado={this.props.autenticado}
                     filtro={true}
@@ -54,4 +54,4 @@ class BolsosPage extends Component {
     }
 }
 
-export default BolsosPage;
+export default TennisPage;

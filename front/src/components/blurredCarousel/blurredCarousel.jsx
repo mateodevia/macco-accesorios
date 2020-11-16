@@ -1,49 +1,41 @@
 // eslint-disable-next-line no-unused-vars
-import React, { Component } from "react";
-import "./blurredCarrousel.css";
+import React, { Component } from 'react';
+import './blurredCarrousel.css';
 // eslint-disable-next-line no-unused-vars
-import { Fade } from "react-slideshow-image";
-import carousel1 from "./carousel1.jpg";
-import carousel2 from "./carousel2.jpg";
-import carousel3 from "./carousel3.jpg";
+import { Fade } from 'react-slideshow-image';
+import carousel1 from './carousel1.jpg';
+import carousel2 from './carousel2.jpg';
+import carousel3 from './carousel3.jpg';
 
 class BlurredCarousel extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            fadeImages: [carousel1, carousel2, carousel3],
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      fadeImages: [
-        carousel1,
-        carousel2,
-        carousel3,
-      ],
+            fadeProperties: {
+                duration: 5000,
+                transitionDuration: 1000,
+                infinite: true,
+                indicators: true,
+                arrows: false,
+            },
+        };
+    }
 
-      fadeProperties: {
-        duration: 5000,
-        transitionDuration: 1000,
-        infinite: true,
-        indicators: true,
-        arrows: false
-      }
-    };
-  }
-
-  render() {
-
-    return (
-      <Fade {...this.state.fadeProperties}>
-
-        {this.state.fadeImages.map(
-          imagen =>
-            <div className="each-fade">
-              <div className="image-container">
-                <img className="slide" src={imagen} />
-              </div>
-            </div>
-        )}
-      </Fade>
-    );
-  }
+    render() {
+        return (
+            <Fade {...this.state.fadeProperties}>
+                {this.state.fadeImages.map((imagen) => (
+                    <div className='each-fade'>
+                        <div className='image-container'>
+                            <img className='slide' src={imagen} />
+                        </div>
+                    </div>
+                ))}
+            </Fade>
+        );
+    }
 }
 
 export default BlurredCarousel;

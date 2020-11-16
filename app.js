@@ -6,6 +6,8 @@ var logger = require("morgan");
 
 var images = require("./routes/images");
 var bolsos = require("./routes/bolsos");
+var morrales = require("./routes/morrales");
+var tennis = require("./routes/tennis");
 var autenticacion = require("./routes/autenticacion");
 
 
@@ -24,6 +26,8 @@ app.use(express.static(path.join(__dirname, "front/build")));
 
 app.use("/images", images);
 app.use("/crudBolsos", bolsos);
+app.use("/crudMorrales", morrales);
+app.use("/crudTennis", tennis);
 app.use("/autenticacion", autenticacion);
 
 // catch 404 and forward to error handler
